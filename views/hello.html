@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h3>Simple print</h3>
+  <p>
+    Hello, {{ name }}! You are {{ age }} years old.
+  </p>
+
+  <h3>Conditional</h3>
+  {% if age > 15 %}
+    <p>You are over the age of 15!</p>
+  {% endif %}
+
+  <h3>Users loop</h3>
+  {% for user in users %}
+    <p>{{ user.name }} is {{ user.age }} years old.</p>
+  {% endfor %}
+
+  <h3>Filter</h3>
+  {{ 'string'|md5 }}
+  
+</body>
+</html>
